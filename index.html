@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/favicons/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>k4mmi's portfolio</title>
+</head>
+<body>
+
+    <div class="alert" style="position: fixed; top: 0; left: 0; background: var(--black); padding: 2px 5px;"><span style="color: var(--grayLight); font-size: 12px;">under development :3</span></div>
+
+    <div class="menu-btn">
+
+        <button onclick="menuBtn(menuStatus, 'up')"><img id="img-btn" src="./assets/icons/menu.svg" alt="Menu"></button>
+
+    </div>
+
+    <div class="container">
+
+        <!-- NAV -->
+
+        <nav id="nav-container" class="nav-container">
+
+            <div class="nav-sticky">
+    
+                <span class="nav-title">
+                    <mark>k4mmi's</mark> fancy github portfolio
+                </span>
+    
+                <ul class="nav-list">
+    
+                    <li><a href="./#">home</a></li>
+                    <li><a href="./#about-section">about me</a></li>
+                    <li><a href="./#projects-section">projects</a></li>
+                    <li><a href="./#tools-section">tools</a></li>
+                    <li><a href="https://github.com/k4mmi">github</a></li>
+    
+                </ul>
+    
+            </div>
+        </nav>
+
+        <!-- CONTENT OF THE WEBSITE -->
+
+        <div class="section-container">
+
+            <div class="sections">
+
+                <div class="main-section">
+
+                    <h1>welcome to <mark>k4mmi</mark>'s <br>fancy github portfolio</h1>
+
+                </div>
+                
+                <div id="about" class="about-section">
+
+                    <h2>about me</h2>
+
+                    <p>Hello, my name is k4mmi. I'm university student and I study digital design. I also focus on front-end development. My fav operation system is arch linux.</p>
+
+                </div>
+
+                <hr>
+
+                <div id="projects-section" class="projects-section">
+
+                    <h2>projects</h2>
+
+                    <div class="project-banners">
+
+                        <a href="./calculator"><img src="./assets/banners/calculator-small.jpg" alt="Calculator"></a>
+                        <a href="./less-is-more"><img src="./assets/banners/less-is-more-small.jpg" alt="Less is more"></a>
+                        <a href="./pfko"><img src="./assets/banners/pfko-small.jpg" alt="Digital New Yeard card"></a>
+                        <a href="./template" class="mobile-hide"><img src="./assets/banners/none-small.jpg" alt="Nothing"></a>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div id="tools-section" class="tools-section">
+                    
+                    <h2>tools</h2>
+
+                    <div class="tool-boxes">
+
+                        <div class="tool-box">
+                            <img src="./assets/icons/photo.svg" alt="photo">
+                            <div class="tool-box-text">
+                                <span class="tool-type">raster graphics</span>
+                                <span class="tool-name">affinity photo</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/designer.svg" alt="designer icon">
+                            <div class="tool-box-text">
+                                <span class="tool-type">vector graphics</span>
+                                <span class="tool-name">affinity designer</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/publisher.svg" alt="">
+                            <div class="tool-box-text">
+                                <span class="tool-type">desktop publishing</span>
+                                <span class="tool-name">affinity publisher</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/vscodium.svg" alt="">
+                            <div class="tool-box-text">
+                                <span class="tool-type">ide</span>
+                                <span class="tool-name">vscodium</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/blender.svg" alt="">
+                            <div class="tool-box-text">
+                                <span class="tool-type">3d modeling</span>
+                                <span class="tool-name">blender</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/davinci.svg" alt="">
+                            <div class="tool-box-text">
+                                <span class="tool-type">video editing</span>
+                                <span class="tool-name">davinci resolve</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/figma.svg" alt="">
+                            <div class="tool-box-text">
+                                <span class="tool-type">ui/ux design</span>
+                                <span class="tool-name">figma</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr>
+                
+                <!-- FOOTER -->
+
+                <footer class="footer">
+                    
+                    <span>made with <mark>❤</mark> by me :3</span>
+
+                    <span><a href="https://github.com/k4mmi">github</a></span>
+
+                </footer>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./scripts/script.js"></script>
+
+</body>
+</html>
