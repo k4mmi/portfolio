@@ -21,9 +21,9 @@ function menuBtn(input, dir) {
             // Choose directory of image
 
             switch (dir) {
-                case "same": menuBtnIcon.src = "./assets/icons/exit.svg"
-                case "up": menuBtnIcon.src = "../assets/icons/exit.svg"
-                case "up2": menuBtnIcon.src = "../../assets/icons/exit.svg"
+                case "same": menuBtnIcon.src = "./assets/icons/exit.svg"; break;
+                case "up": menuBtnIcon.src = "../assets/icons/exit.svg"; break;
+                case "up2": menuBtnIcon.src = "../../assets/icons/exit.svg"; break;
             }
 
             break;
