@@ -9,8 +9,6 @@
 </head>
 <body>
 
-    <div class="alert" style="position: fixed; top: 0; left: 0; background: var(--black); padding: 2px 5px; z-index: 999;"><span style="color: var(--grayLight); font-size: 12px;">under development :3</span></div>
-
     <div class="menu-btn">
 
         <button onclick="menuBtn(menuStatus, 'same')"><img id="img-btn" src="./assets/icons/menu.svg" alt="Menu"></button>
@@ -31,11 +29,11 @@
     
                 <ul class="nav-list">
     
-                    <li><a href="./#">home</a></li>
-                    <li><a href="./#about-section">about me</a></li>
-                    <li><a href="./#projects-section">projects</a></li>
-                    <li><a href="./#tools-section">tools</a></li>
-                    <li><a href="https://github.com/k4mmi">github</a></li>
+                    <li><a onclick="menuBtn(false, 'same')" href="./#">home</a></li>
+                    <li><a onclick="menuBtn(false, 'same')" href="./#about-section">about me</a></li>
+                    <li><a onclick="menuBtn(false, 'same')" href="./#projects-section">projects</a></li>
+                    <li><a onclick="menuBtn(false, 'same')" href="./#tools-section">tools</a></li>
+                    <li><a onclick="menuBtn(false, 'same')" href="https://github.com/k4mmi">github</a></li>
     
                 </ul>
     
@@ -50,7 +48,16 @@
 
                 <div class="main-section">
 
-                    <h1>welcome to <mark>k4mmi</mark>'s <br>fancy github portfolio</h1>
+                    <h1>
+                        <!-- <span class="firstAnimation mobile-hide">
+                                welcome to <mark>k4mmi</mark>'s 
+                        </span>
+                        <span class="secondAnimation mobile-hide">
+                                fancy github portfolio
+                        </span> -->
+                        welcome to <mark>k4mmi</mark>'s <br> 
+                        fancy github portfolio
+                    </h1>
 
                 </div>
                 
@@ -70,10 +77,10 @@
 
                     <div class="project-banners">
 
-                        <a href="./calculator"><img src="./assets/banners/calculator-small.jpg" alt="Calculator"></a>
-                        <a href="./less-is-more"><img src="./assets/banners/less-is-more-small.jpg" alt="Less is more"></a>
-                        <a href="./pfko"><img src="./assets/banners/pfko-small.jpg" alt="Digital New Yeard card"></a>
-                        <a href="./template" class="mobile-hide"><img src="./assets/banners/none-small.jpg" alt="Nothing"></a>
+                        <a href="./projects/calculator"><img src="./assets/banners/calculator-small.jpg" alt="Calculator"></a>
+                        <a href="./projects/less-is-more"><img src="./assets/banners/less-is-more-small.jpg" alt="Less is more"></a>
+                        <a href="./projects/pfko"><img src="./assets/banners/pfko-small.jpg" alt="Digital New Yeard card"></a>
+                        <a href="./projects/template" class="mobile-hide"><img src="./assets/banners/none-small.jpg" alt="Nothing"></a>
 
                     </div>
 

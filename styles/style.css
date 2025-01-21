@@ -20,6 +20,7 @@
     --spaceSmallest: 5px;
     --borderWidth: 2px;
     --animation-duration: 200ms;
+    --animation-duration-long: 200ms;
     --scale: scale(1.03);
 }
 
@@ -55,6 +56,11 @@
 
 body {
     background: var(--black);
+}
+
+::selection {
+    color: var(--black);
+    background: var(--fancyColor);
 }
 
 /******************** BASIC STUFF ********************/
@@ -220,6 +226,47 @@ hr {
     height: 100vh;
 }
 
+/* .main-section h1 {
+    display: block;
+    width: 13.5em;
+}
+
+.main-section h1 > span {
+    animation: typing 3000ms linear, cursor 500ms steps(1) 5;
+    animation-fill-mode: forwards;
+    border-right: 4px #0000 solid;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "";
+    width: 0;
+} */
+
+.main-section .secondAnimation {
+    animation-delay: 3000ms;
+}
+
+.main-section h1 > span span {
+    animation: typing;
+    animation-duration: 5000ms;
+}
+
+/* .firstAnimation span {
+} */
+
+.secondAnimation span {
+    animation-delay: 30ms;
+}
+
+@keyframes cursor {
+    50% {border-right: 4px var(--white) solid;}
+}
+
+@keyframes typing {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
 /***** ABOUT *****/
 
     /* nothing... */
@@ -293,7 +340,7 @@ hr {
     height: 55%;
 }
 
-/***** PROJECTS *****/
+/***** PROJECT *****/
 
 .project-section {
     margin-top: var(--spaceMedium);
@@ -331,6 +378,52 @@ hr {
     font-weight: 400;
     line-height: normal;
     padding-bottom: 7px;
+}
+
+.project-btns {
+    display: flex;
+    gap: var(--spaceSmall);
+    flex-wrap: wrap;
+    /* justify-content: right; */
+}
+
+.project-btns a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: var(--black);
+    background: var(--fancyColor);
+    font-size: 24px;
+    text-decoration: none;
+    padding: 0 var(--spaceSmall);
+}
+
+.project-btns a span {
+    color: var(--black);
+}
+
+.project-btns .black-btn {
+    border: var(--borderWidth) var(--white) solid;
+    background: none;
+}
+
+.project-btns .black-btn span {
+    color: var(--white);
+}
+
+.project-btns a:hover {
+    background: var(--white);
+    transform: var(--scale);
+}
+
+.project-btns .black-btn:hover {
+    border-color: var(--fancyColor);
+    background: none;
+}
+
+.project-btns .black-btn:hover span {
+    color: var(--fancyColor);
 }
 
 /*** Colors ***/
@@ -563,6 +656,13 @@ hr {
         z-index: 300;
         top: 0;
         left: 0;
+        animation-name: roll-menu;
+        animation-duration: var(--animation-duration-long);
+    }
+
+    @keyframes roll-menu {
+        from {transform: translateY(-100vh);}
+        to {transform: translateY(0);}
     }
     
     /* The title in nav */
@@ -772,6 +872,7 @@ hr {
         /* font-weight: 400; */
         /* line-height: normal; */
         /* display: none; */
+        flex-wrap: wrap;
     }
     
     .nav-sticky {
@@ -896,6 +997,52 @@ hr {
         /* font-size: 20px; */
         /* height: 55%; */
     }
+
+    /***** PROJECT *****/
+
+    .project-section {
+        margin-top: var(--spaceBig);
+        /* min-height: 100vh; */
+    }
+
+    .project-section .project-banner {
+        /* width: 100%; */
+        /* margin-bottom: var(--spaceMedium); */
+        /* border: var(--grayLight) var(--borderWidth) solid; */
+    }
+
+    .project-title {
+        /* display: flex; */
+        /* align-items: center; */
+        /* gap: var(--spaceSmall); */
+        /* margin-bottom: var(--spaceSmall); */
+    }
+
+    .project-title h2 {
+        /* margin-bottom: 0; */
+    }
+
+    .project-title .tags {
+        /* display: flex; */
+        /* align-items: center; */
+        /* gap: var(--spaceSmaller); */
+    }
+
+    .project-title .tags .tag {
+        /* padding: var(--spaceSmallest) calc(var(--spaceSmallest) * 2); */
+        /* border: var(--grayLight) var(--borderWidth) solid; */
+        /* font-size: 16px; */
+        /* font-style: normal; */
+        /* font-weight: 400; */
+        /* line-height: normal; */
+        /* padding-bottom: 7px; */
+    }
+
+}
+
+/********** WIDTH 420px **********/
+
+@media screen and (max-width: 420px) {
 
     /***** PROJECTS *****/
 
