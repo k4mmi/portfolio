@@ -2,12 +2,14 @@
 
 :root{
     --black: #000;
+    --blackTrans: #0003;
     --grayLight: #999;
     --grayVeryLight: #CCC;
     --grayDark: #444;
     --white: #fff;
     --fancyColor: #FFA9F1;
     --fancyColorDark: #632959;
+    --fancyColorDarker: #391333;
     --blue: #8CDBFD;
     --red: #FF6F77;
     --yellow: #FFDC81;
@@ -20,9 +22,26 @@
     --spaceSmallest: 5px;
     --borderWidth: 2px;
     --animation-duration: 200ms;
-    --animation-duration-long: 200ms;
+    --animation-duration-long: 500ms;
+    --animation-duration-longer: 1000ms;
     --scale: scale(1.03);
 }
+
+/* @media (prefers-color-scheme: light) {
+    :root{
+        --black: #FFA9F1;
+        --grayLight: #333;
+        --grayVeryLight: #222;
+        --grayDark: #555;
+        --white: #000;
+        --fancyColor: #b00093;
+        --fancyColorDark: #d473c4;
+        --blue: #5fb0d3;
+        --red: #df5057;
+        --yellow: #FFDC81;
+        --green: #58d47d;
+    }
+} */
 
 /******************** FONTS ********************/
 
@@ -52,11 +71,27 @@
     color: var(--white);
     scrollbar-width: thin;
     scrollbar-color: var(--grayDark) var(--black);
+    z-index: 1;
 }
 
-body {
+html, body {
     background: var(--black);
+    background-image: radial-gradient(var(--black), #0000 70%), linear-gradient(var(--fancyColorDarker), #0000);
+    background-blend-mode: luminosity, normal;
+    background-size: 2000px 1000px, auto 250px;
+    background-repeat: repeat-x, no-repeat;
+    background-position: 1000px -300px, 0 0;
+    animation: backgroundGradient;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
+
+@keyframes backgroundGradient {
+    from {background-position: 0 -300px, 0 0;}
+    to {background-position: 2000px -300px, 0 0;}
+}
+
 
 ::selection {
     color: var(--black);
@@ -87,6 +122,8 @@ p {
     font-style: normal;
     font-weight: 400;
     line-height: 30px;
+    animation: textLoad;
+    animation-duration: var(--animation-duration-longer);
     margin-bottom: var(--spaceSmall);
 }
 
@@ -108,6 +145,7 @@ hr {
     border-top: var(--borderWidth) var(--grayDark) solid;
     margin: var(--spaceMedium) 0;
 }
+
 /******************** WEB ********************/
 
 /********** CONTAINER **********/
@@ -126,7 +164,6 @@ hr {
     right: var(--spaceSmall);
     z-index: 500;
     display: none;
-    transition: var(--animation-duration);
 }
 
 .menu-btn:hover {
@@ -134,8 +171,14 @@ hr {
     transition: none;
 }
 
+.menu-btn:active img {
+    transition: var(--animation-duration-long);
+    rotate: 360deg;
+    transform: scale(0.9);
+}
 .menu-btn:active {
-    opacity: 0.5;
+    transform: scale(0.9);
+    transition: var(--animation-duration);
 }
 
 .menu-btn button {
@@ -155,15 +198,17 @@ hr {
 /********** NAV CONTAINER **********/
 
 .nav-container {
-    border-right: var(--borderWidth) solid var(--grayLight);
+    border-right: var(--borderWidth) solid var(--grayDark);
     min-height: 100vh;
     width: 550px;
     padding-top: calc(50vh - 620px / 2);
+    background: var(--blackTrans);
+    box-shadow: var(--black) 4px 0 0px;
 }
 
 /* The title in nav */
 .nav-title {
-    color: #FFF;
+    color: var(--white);
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -247,9 +292,41 @@ hr {
     color: var(--grayLight);
 }
 
+.main-section h1{
+    background: none;
+    color: var(--fancyColor);
+    /* text-shadow: var(--fancyColor) 0 0 20px; */
+    animation-name: none;
+    animation-name: neonWhite;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+}
+
+.main-section mark{
+    background: none;
+    color: var(--fancyColor);
+    /* text-shadow: var(--fancyColor) 0 0 20px; */
+    animation-name: none;
+    animation-name: neonFancy;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+}
+
 @keyframes cursor {
     45% {opacity: 0;}
     55% {opacity: 1;}
+}
+
+@keyframes neonWhite {
+    0% {text-shadow: var(--white) 0 0 20px;}
+    50% {text-shadow: var(--white) 0 0 5px;}
+    100% {text-shadow: var(--white) 0 0 20px;}
+}
+
+@keyframes neonFancy {
+    0% {text-shadow: var(--fancyColor) 0 0 20px;}
+    50% {text-shadow: var(--fancyColor) 0 0 5px;}
+    100% {text-shadow: var(--fancyColor) 0 0 20px;}
 }
 
 /***** ABOUT *****/
@@ -266,6 +343,7 @@ hr {
 
 .project-banners a {
     width: calc(50% - var(--spaceSmall) / 2);
+    display: flex;
 }
 
 .project-banners img {
@@ -635,7 +713,7 @@ hr {
         width: 100vw;
         height: 100vh;
         position: fixed;
-        background: var(--black);
+        background: var(--black); 
         padding-top: 0;
         display: none;
         z-index: 300;

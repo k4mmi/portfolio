@@ -82,7 +82,7 @@ const alertHTML = `<div class="alert" style="position: fixed; top: 0; left: 0; b
 const animatedHeading = document.getElementById("animated-heading");
 
 // Define text
-const textInAnimation = "welcome to [k4mmi's] ;fancy github portfolio";
+let textInAnimation = "welcome to [k4mmi's] ;fancy github portfolio";
 
 function headingAnimation() {
 
@@ -116,3 +116,9 @@ function headingAnimation() {
 }
 
 window.onload = headingAnimation;
+
+// Undertale reference - run in console "undertaleReference()"
+function undertaleReference () {
+    textInAnimation = "it's a beautiful day outside.;       ;birds are singing, flowers are blooming...;        ;on days like these, kids like you...;            ;[Should be burning in hell.]";
+    headingAnimation()
+}
