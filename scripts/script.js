@@ -78,32 +78,37 @@ const alertHTML = `<div class="alert" style="position: fixed; top: 0; left: 0; b
 
 /******************** TYPING ANIMATION ********************/
 
+// Define animated-heading
 const animatedHeading = document.getElementById("animated-heading");
 
+// Define text
 const textInAnimation = "welcome to [k4mmi's] ;fancy github portfolio";
 
 function headingAnimation() {
 
+    // Define interval count
     let i = 0;
     
+    // Interval
     let intervalAnimation =  setInterval(() => {
 
         // Add one number to countiog of intervals
         ++i
-        console.log("interval = "+i);
         
         // Interval stopper
         if (i >= textInAnimation.length) {
             clearInterval(intervalAnimation);
-            console.log("stop interval");
         }
 
+        // Slicing text by count of interval
         let text = textInAnimation.slice(0, i);
         
+        // Replace special symbols by html code
         text = text.replace(/\;/g, "<br>");
         text = text.replace(/\[/g, "<mark>");
         text = text.replace(/\]/g, "</mark>");
-        console.log(text);
+
+        // Apply text string into html document
         animatedHeading.innerHTML = text;
 
     }, 100)
