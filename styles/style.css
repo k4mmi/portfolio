@@ -226,45 +226,30 @@ hr {
     height: 100vh;
 }
 
-/* .main-section h1 {
-    display: block;
-    width: 13.5em;
+.main-section h1 {
+    font-size: 0px;
 }
 
-.main-section h1 > span {
-    animation: typing 3000ms linear, cursor 500ms steps(1) 5;
-    animation-fill-mode: forwards;
-    border-right: 4px #0000 solid;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: "";
-    width: 0;
-} */
+.main-section h1 span {
+    display: inline;
+    font-size: 48px;
+}
 
 .main-section .secondAnimation {
     animation-delay: 3000ms;
 }
 
-.main-section h1 > span span {
-    animation: typing;
-    animation-duration: 5000ms;
-}
-
-/* .firstAnimation span {
-} */
-
-.secondAnimation span {
-    animation-delay: 30ms;
+.main-section .cursor {
+    animation: cursor;
+    animation-iteration-count: infinite;
+    font-size: 48px;
+    animation-duration: 1000ms;
+    color: var(--grayLight);
 }
 
 @keyframes cursor {
-    50% {border-right: 4px var(--white) solid;}
-}
-
-@keyframes typing {
-    from {width: 0%;}
-    to {width: 100%;}
+    45% {opacity: 0;}
+    55% {opacity: 1;}
 }
 
 /***** ABOUT *****/
@@ -1103,5 +1088,9 @@ hr {
         /* line-height: normal; */
         /* padding-bottom: 7px; */
     }
+
+}
+
+.main-section-test {
 
 }

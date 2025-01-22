@@ -71,6 +71,43 @@ function widthSizeChecker() {
 // Active widthSizeChecker() after resize
 window.onresize = widthSizeChecker;
 
-/******************** ALERT (thank u chatgpt for this temporary shitty script :3) ********************/
+/******************** ALERT ********************/
 
+// thank u chatgpt for this temporary shitty script :3
 const alertHTML = `<div class="alert" style="position: fixed; top: 0; left: 0; background: var(--black); padding: 2px 5px; z-index: 999;"><span style="color: var(--grayLight); font-size: 12px;">under development :3</span></div>`;document.body.insertAdjacentHTML('afterbegin', alertHTML);
+
+/******************** TYPING ANIMATION ********************/
+
+const animatedHeading = document.getElementById("animated-heading");
+
+const textInAnimation = "welcome to [k4mmi's] ;fancy github portfolio";
+
+function headingAnimation() {
+
+    let i = 0;
+    
+    let intervalAnimation =  setInterval(() => {
+
+        // Add one number to countiog of intervals
+        ++i
+        console.log("interval = "+i);
+        
+        // Interval stopper
+        if (i >= textInAnimation.length) {
+            clearInterval(intervalAnimation);
+            console.log("stop interval");
+        }
+
+        let text = textInAnimation.slice(0, i);
+        
+        text = text.replace(/\;/g, "<br>");
+        text = text.replace(/\[/g, "<mark>");
+        text = text.replace(/\]/g, "</mark>");
+        console.log(text);
+        animatedHeading.innerHTML = text;
+
+    }, 100)
+
+}
+
+window.onload = headingAnimation();
