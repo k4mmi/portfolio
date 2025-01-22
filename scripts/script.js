@@ -115,4 +115,4 @@ function headingAnimation() {
 
 }
 
-window.onload = headingAnimation();
+window.onload = headingAnimation;
