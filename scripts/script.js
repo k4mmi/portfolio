@@ -1,3 +1,7 @@
+/******************** CONSOLE ********************/
+
+console.log('%c Welcome in console!!', 'background: #222; color: #FFA9F1');
+
 /******************** MENU BTN ********************/
 
 let menuStatus = true;
@@ -16,7 +20,8 @@ function menuBtn(input, dir) {
 
             menuStatus = false;
 
-            navContainer.style.display = "flex"
+            navContainer.style.display = "flex";
+            console.log("yes");
 
             // Choose directory of image
 
@@ -33,7 +38,7 @@ function menuBtn(input, dir) {
 
             menuStatus = true;
 
-            navContainer.style.display = "none"
+            navContainer.style.display = "none";
 
             // Choose directory of image
 
@@ -57,13 +62,21 @@ function menuBtn(input, dir) {
 // Set selector variable
 let widthSize = document.querySelector("#width");
 
+// Set autoHideNav variable
+let autoHideNav = false;
+
 function widthSizeChecker() {
 
     // If is the size bigger than 1024 px, set it as block
     if (window.innerWidth >= 1024) {
 
-        navContainer.style.display = "block"
-        console.log("hello")
+        navContainer.style.display = "block";
+
+        autoHideNav = true;
+    } else if (window.innerWidth < 1024 && autoHideNav == true){
+
+        navContainer.style.display = "none";
+        autoHideNav = false;
     }
 
 }
@@ -71,18 +84,37 @@ function widthSizeChecker() {
 // Active widthSizeChecker() after resize
 window.onresize = widthSizeChecker;
 
-/******************** ALERT ********************/
-
-// thank u chatgpt for this temporary shitty script :3
-const alertHTML = `<div class="alert" style="position: fixed; top: 0; left: 0; background: var(--black); padding: 2px 5px; z-index: 999;"><span style="color: var(--grayLight); font-size: 12px;">under development :3</span></div>`;document.body.insertAdjacentHTML('afterbegin', alertHTML);
-
 /******************** TYPING ANIMATION ********************/
 
 // Define animated-heading
 const animatedHeading = document.getElementById("animated-heading");
 
+
+// Random cool word generator
+function randomCoolWord() {
+
+    // Define random number 0-5
+    let randomNum = Math.round(Math.random() * 5);
+
+    // Choose the right word
+    switch (randomNum) {
+        case 0:
+            return "cool";
+        case 1:
+            return "fancy";
+        case 2:
+            return "nice";
+        case 3:
+            return "funny";
+        case 4:
+            return "uwu";
+        case 5:
+            return "cute";
+    }
+}
+
 // Define text
-let textInAnimation = "welcome to [k4mmi's] ;fancy github portfolio";
+let textInAnimation = `welcome to [k4mmi's] ;${randomCoolWord()} github portfolio`;
 
 function headingAnimation() {
 

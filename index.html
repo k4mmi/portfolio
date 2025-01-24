@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- SEO stuff -->
+    <title>k4mmi's portfolio</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="developer, portfolio, front-end, webdev, designer">
+    <meta name="author" content="k4mmi">
+    <meta name="description" content="Welcome to the k4mmi portfolio! Here you will find information about me and my web development projects.">
+    <meta property="og:title" content="k4mmi's github portfolio">
+    <meta property="og:description" content="Welcome to the k4mmi portfolio! Here you will find information about me and my web development projects.">
+    <meta property="og:image" content="./assets/banners/web.jpg">
+    <meta property="og:url" content="https://k4mmi.github.io/portfolio/">
+    <!-- CSS Links -->
     <link rel="shortcut icon" href="./assets/favicons/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css">
-    <title>k4mmi's portfolio</title>
 </head>
 <body>
 
@@ -33,6 +42,7 @@
                     <li><a onclick="menuBtn(false, 'same')" href="./#about-section">about me</a></li>
                     <li><a onclick="menuBtn(false, 'same')" href="./#projects-section">projects</a></li>
                     <li><a onclick="menuBtn(false, 'same')" href="./#tools-section">tools</a></li>
+                    <li><a onclick="menuBtn(false, 'same')" href="./#languages-section">languages</a></li>
                     <li><a onclick="menuBtn(false, 'same')" href="https://github.com/k4mmi">github</a></li>
     
                 </ul>
@@ -41,6 +51,7 @@
         </nav>
 
         <!-- CONTENT OF THE WEBSITE -->
+        <!-- (everything, what isn't a NAV) -->
 
         <div class="section-container">
 
@@ -49,14 +60,18 @@
                 <div class="main-section">
 
                     <h1>
+
+                        <!-- Yeah, the typing animation is made in JS. Check /scripts/script.js, headingAnimation().-->
+                        <!-- The 3D animation is just simple css magic -->
                         <span id="animated-heading">
                             <noscript>
                                 welcome to <mark>k4mmi</mark>'s <br> 
                                 fancy github portfolio
                             </noscript>
-                            </span>
+                        </span>
+
+                        <!-- Animated cursor -->
                         <span class='cursor'>_</span>
-                    <div class="effect-terminal"></div>
 
                     </h1>
 
@@ -89,7 +104,7 @@
 
                 <hr>
 
-                <div id="tools-section" class="tools-section">
+                <div id="languages-section" class="tools-section">
                     
                     <h2>tools</h2>
 
@@ -103,45 +118,79 @@
                             </div>
                         </div>
                         <div class="tool-box">
-                            <img src="./assets/icons/designer.svg" alt="designer icon">
+                            <img src="./assets/icons/designer.svg" alt="designer">
                             <div class="tool-box-text">
                                 <span class="tool-type">vector graphics</span>
                                 <span class="tool-name">affinity designer</span>
                             </div>
                         </div>
                         <div class="tool-box">
-                            <img src="./assets/icons/publisher.svg" alt="">
+                            <img src="./assets/icons/publisher.svg" alt="publisher">
                             <div class="tool-box-text">
                                 <span class="tool-type">desktop publishing</span>
                                 <span class="tool-name">affinity publisher</span>
                             </div>
                         </div>
                         <div class="tool-box">
-                            <img src="./assets/icons/vscodium.svg" alt="">
+                            <img src="./assets/icons/vscodium.svg" alt="vscodium">
                             <div class="tool-box-text">
                                 <span class="tool-type">ide</span>
                                 <span class="tool-name">vscodium</span>
                             </div>
                         </div>
                         <div class="tool-box">
-                            <img src="./assets/icons/blender.svg" alt="">
+                            <img src="./assets/icons/blender.svg" alt="blender">
                             <div class="tool-box-text">
                                 <span class="tool-type">3d modeling</span>
                                 <span class="tool-name">blender</span>
                             </div>
                         </div>
                         <div class="tool-box">
-                            <img src="./assets/icons/davinci.svg" alt="">
+                            <img src="./assets/icons/davinci.svg" alt="davinci">
                             <div class="tool-box-text">
                                 <span class="tool-type">video editing</span>
                                 <span class="tool-name">davinci resolve</span>
                             </div>
                         </div>
                         <div class="tool-box">
-                            <img src="./assets/icons/figma.svg" alt="">
+                            <img src="./assets/icons/figma.svg" alt="figma">
                             <div class="tool-box-text">
                                 <span class="tool-type">ui/ux design</span>
                                 <span class="tool-name">figma</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div id="tools-section" class="tools-section">
+                    
+                    <h2>languages</h2>
+
+                    <div class="tool-boxes">
+
+                        <div class="tool-box">
+                            <img src="./assets/icons/html.svg" alt="html">
+                            <div class="tool-box-text">
+                                <span class="tool-type">front-end</span>
+                                <span class="tool-name">html</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/css.svg" alt="css">
+                            <div class="tool-box-text">
+                                <span class="tool-type">front-end</span>
+                                <span class="tool-name">css</span>
+                            </div>
+                        </div>
+                        <div class="tool-box">
+                            <img src="./assets/icons/js.svg" alt="javascript">
+                            <div class="tool-box-text">
+                                <span class="tool-type">front-end</span>
+                                <span class="tool-name">javascript</span>
                             </div>
                         </div>
 
