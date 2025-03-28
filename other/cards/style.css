@@ -43,24 +43,24 @@ body {
 
 @media screen and (max-width: 500px) {
     .card {
-        transform: rotate(90deg) scale(.65);
+        transform: rotate(90deg) scale(.60);
     }
 }
 
 @media screen and (max-width: 400px) {
     .card {
-        transform: rotate(90deg) scale(.60);
+        transform: rotate(90deg) scale(.55);
     }
 }
 
 @media screen and (max-width: 370px) {
     .card {
-        transform: rotate(90deg) scale(.60);
+        transform: rotate(90deg) scale(.50);
     }
 }
 
 @media screen and (max-width: 350px) {
     .card {
-        transform: rotate(90deg) scale(.50);
+        transform: rotate(90deg) scale(.45);
     }
 }
