@@ -31,18 +31,36 @@ body {
 
 @media screen and (max-width: 920px) {
     .card {
-        transform: rotate(-90deg);
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .card {
-        transform: rotate(-90deg) scale(.65);
+        transform: rotate(90deg);
     }
 }
 
 @media screen and (max-width: 650px) {
     .card {
-        transform: rotate(-90deg) scale(.85);
+        transform: rotate(90deg) scale(.80);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        transform: rotate(90deg) scale(.65);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card {
+        transform: rotate(90deg) scale(.60);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .card {
+        transform: rotate(90deg) scale(.60);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .card {
+        transform: rotate(90deg) scale(.50);
     }
 }
