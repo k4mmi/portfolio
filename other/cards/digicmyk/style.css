@@ -1,0 +1,110 @@
+.cmyk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cmyk__window {
+    border: solid #000 3px;
+    width: 860px;
+    height: 460px;
+    font-family: "Space Grotesk";
+}
+
+.cmyk__windowPanel {
+    font-size: 28px;
+    font-weight: 450;
+    height: 60px;
+    border-bottom: solid #000 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+}
+
+.cmyk__red {
+    color: #ff0084;
+    font-size: 58px;
+    mix-blend-mode: multiply;
+    position: absolute;
+    text-wrap: nowrap;
+    top: 200px;
+    left: -14px;
+    transform: rotate(-13deg);
+    font-weight: 700;
+    animation: red 10000ms infinite linear;
+    transform-origin: center;
+    pointer-events: none;
+}
+
+.cmyk__topLeft {
+    padding: 14px;
+}
+.cmyk__bottomRight {
+    padding: 14px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+}
+
+.cmyk__topLeft *, .cmyk__bottomRight *{
+    color: #0089d8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 22.5px;
+    line-height: 1.3;
+}
+
+.cmyk__topLeft a:hover{
+    text-decoration: underline;
+}
+
+.cmyk__name {
+    mix-blend-mode: multiply;
+    width: 1040px;
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    animation: name 20000ms infinite linear;
+    pointer-events: none;
+}
+
+.cmyk__control {
+    display: flex;
+}
+
+.cmyk__control button {
+    width: 50px;
+    height: 60px;
+    background: none;
+    border: none;
+}
+
+@keyframes red {
+    0% {
+        font-weight: 700;
+        transform: rotateZ(-13deg) rotateY(0);
+    }
+    50% {
+        font-weight: 100;
+    }
+    100% {
+        font-weight: 1700;
+        transform: rotateZ(347deg) rotateY(360deg);
+    }
+}
+
+@keyframes name {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url(./SpaceGrotesk[wght].ttf);
+}

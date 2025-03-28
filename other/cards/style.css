@@ -1,0 +1,43 @@
+html {
+    background: #000000;
+}
+
+body {
+    display: flex;
+    width: fit-content;
+    top: calc(50vh - 250px);
+    left: calc(50vw - 450px);
+    position: absolute;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    height: 500px;
+    background: #fff;
+    aspect-ratio: 9/5;
+    position: relative;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 920px) {
+    .card {
+        transform: rotate(-90deg);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        transform: rotate(-90deg) scale(.65);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .card {
+        transform: rotate(-90deg) scale(.85);
+    }
+}

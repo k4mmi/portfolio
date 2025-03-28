@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>business_card.js</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="robots" content="noindex">
+    <script>
+        let status = false;
+    </script>
+</head>
+<body id="scale">
+    <div id="card" class="card cmyk">
+        <div class="cmyk__window">
+            <div class="cmyk__windowPanel">
+                <span>business_card.js</span>
+                <div class="cmyk__control">
+                    <button onClick="
+                        document.getElementById('card').style.display= 'none';
+                    ">
+                        <img src="./min.svg" alt="min" height="18px">
+                    </button>
+                    <button onClick="
+                        status ? 
+                        (document.getElementById('scale').style.scale = '0.9',  status = false):
+                        (document.getElementById('scale').style.scale = '1',  status = true)
+                    ">
+                        <img src="./max.svg" alt="max" height="18px">
+                    </button>
+                    <button onClick="
+                        document.getElementById('card').style.display= 'none';
+                    ">
+                        <img src="./close.svg" alt="close" height="25px">
+                    </button>
+                </div>
+            </div>
+            <div class="cmyk__red">
+                Ateliér Digitální design (1.&#8201;ročník)
+            </div>
+            <div class="cmyk__topLeft">
+                <p>
+                    <a href="mailto:k_srotir@utb.cz">k_srotir@utb.cz</a>, <a href="call:723XXXXXX">723 XXX XXX</a>
+                    <br>
+                    <a href="https://github.com/k4mmi">https://github.com/k4mmi</a>
+                </p>
+            </div>
+            <div class="cmyk__bottomRight">
+                <p>
+                    Univerzita Tomáše Bati ve Zlíně
+                    <br>
+                    Fakulta multimediálních komunikací
+                    <br>
+                    Budova U16, Třída Tomáše Bati 4342, 760 01 Zlín
+                </p>
+            </div>
+            <img class="cmyk__name" src="./name.png"></img>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+.code {
+    background: #e0e5ec;
+    font-family: "Source Code Pro";
+
+}
+
+.code__image {
+    height: 460px;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+
+.code__text {
+    position: absolute;
+    font-size: 24px;
+    color: #ff0084;
+}
+
+.code__text a{
+    color: #ff0084;
+    text-decoration: underline;    
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* so stupid ik... but funny */
+.code__all {
+    animation: code infinite 3000ms steps(5);
+    transition: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+body:active .code__all, body:hover .code__all {
+    translate: -1000px 0;
+}
+
+@keyframes code {
+    0% {transform: translate(-1px, 1px);}
+    20% {transform: translate(1px, -1px)}
+    40% {transform: translate(-1px, -1px)}
+    60% {transform: translate(1px, -1px)}
+    80% {transform: translate(1px, 1px)}
+    100% {transform: translate(1px, -1px)}
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url(./SourceCodePro-VariableFont_wght.ttf);
+}
